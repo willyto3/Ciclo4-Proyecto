@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'screens/camera.dart';
-import 'screens/home.dart';
-import 'screens/search.dart';
-import 'screens/shop.dart';
-import 'screens/user.dart';
+import 'camera.dart';
+import 'home.dart';
+import 'search.dart';
+import 'shop.dart';
+import 'user.dart';
 
 class BottomBarScreen extends StatefulWidget {
   static const routeName = "/BottomBarScreen";

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'bottom_bar.dart';
+import 'screens/bottom_bar.dart';
 
 void main() {
   runApp(const MyApp());
