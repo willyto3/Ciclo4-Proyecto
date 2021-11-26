@@ -40,9 +40,10 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
         child: BottomNavigationBar(
           onTap: _selectedPage,
           backgroundColor: Theme.of(context).primaryColor,
-          selectedItemColor: Colors.purple,
+          selectedItemColor: Colors.deepPurple,
           unselectedItemColor: Theme.of(context).textSelectionColor,
           currentIndex: _selectedIndex,
+          selectedLabelStyle: const TextStyle(fontSize: 12.0),
           items: const [
             // Icono de Home
             BottomNavigationBarItem(
