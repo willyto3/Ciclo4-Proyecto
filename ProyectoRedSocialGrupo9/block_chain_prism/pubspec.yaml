@@ -37,6 +37,8 @@ dependencies:
   # uso de iconos de Flutter
   flutter_icons: ^1.1.0
 
+  list_tile_switch: ^1.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

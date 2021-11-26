@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:list_tile_switch/list_tile_switch.dart';
 
-class User extends StatelessWidget {
+class User extends StatefulWidget {
   const User({Key? key}) : super(key: key);
 
+  @override
+  State<User> createState() => _UserState();
+}
+
+class _UserState extends State<User> {
+  bool _value = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,9 +21,27 @@ class User extends StatelessWidget {
             thickness: 1,
             color: Colors.grey,
           ),
-          userListTile("title", "subtitle", context),
-          userListTile("title", "subtitle", context),
-          userListTile("title", "subtitle", context),
+          userListTile("Email", "subtitle", context),
+          userListTile("Phone Number", "subtitle", context),
+          userListTile("Country", "subtitle", context),
+          userTitle("USER SETTINGS"),
+          const Divider(
+            thickness: 1,
+            color: Colors.grey,
+          ),
+          ListTileSwitch(
+            value: _value,
+            leading: const Icon(Icons.mode_night_outlined),
+            onChanged: (value) {
+              setState(() {
+                _value = value;
+              });
+            },
+            visualDensity: VisualDensity.comfortable,
+            switchType: SwitchType.cupertino,
+            switchActiveColor: Colors.purple,
+            title: const Text('Dark Theme'),
+          ),
         ],
       ),
     );
