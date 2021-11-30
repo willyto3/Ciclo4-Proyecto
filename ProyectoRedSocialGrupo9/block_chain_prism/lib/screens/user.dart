@@ -1,5 +1,4 @@
-
-
+// IMPORTACIONES
 import 'package:block_chain_prism/const/colors.dart';
 import 'package:block_chain_prism/provider/dark_theme_provider.dart';
 import 'package:flutter/material.dart';
@@ -66,13 +65,13 @@ class _UserInfoState extends State<User> {
                             opacity: top <= 110.0 ? 1.0 : 0,
                             child: Row(
                               children: [
-                                SizedBox(
+                                const SizedBox(
                                   width: 12,
                                 ),
                                 Container(
                                   height: kToolbarHeight / 1.8,
                                   width: kToolbarHeight / 1.8,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     boxShadow: [
                                       BoxShadow(
                                         color: Colors.white,
@@ -87,10 +86,10 @@ class _UserInfoState extends State<User> {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 12,
                                 ),
-                                Text(
+                                const Text(
                                   // 'top.toString()',
                                   'Guest',
                                   style: TextStyle(
@@ -101,7 +100,7 @@ class _UserInfoState extends State<User> {
                           ),
                         ],
                       ),
-                      background: Image(
+                      background: const Image(
                         image: NetworkImage(
                             'https://cdn1.vectorstock.com/i/thumb-large/62/60/default-avatar-photo-placeholder-profile-image-vector-21666260.jpg'),
                         fit: BoxFit.fill,
@@ -118,7 +117,7 @@ class _UserInfoState extends State<User> {
                     Padding(
                         padding: const EdgeInsets.only(left: 8.0),
                         child: userTitle('User Information')),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.grey,
                     ),
@@ -134,13 +133,13 @@ class _UserInfoState extends State<User> {
                       padding: const EdgeInsets.only(left: 8.0),
                       child: userTitle('User settings'),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.grey,
                     ),
                     ListTileSwitch(
                       value: themeChange.darkTheme,
-                      leading: Icon(Icons.camera_alt_outlined),
+                      leading: const Icon(Icons.camera_alt_outlined),
                       onChanged: (value) {
                         setState(() {
                           themeChange.darkTheme = value;
@@ -149,7 +148,7 @@ class _UserInfoState extends State<User> {
                       visualDensity: VisualDensity.comfortable,
                       switchType: SwitchType.cupertino,
                       switchActiveColor: Colors.indigo,
-                      title: Text('Dark theme'),
+                      title: const Text('Dark theme'),
                     ),
                     userListTile('Logout', '', 4, context),
                   ],
@@ -166,11 +165,11 @@ class _UserInfoState extends State<User> {
 
  Widget _buildFab() {
     //starting fab position
-    final double defaultTopMargin = 200.0 - 4.0;
+    const double defaultTopMargin = 200.0 - 4.0;
     //pixels from top where scaling should start
-    final double scaleStart = 160.0;
+    const double scaleStart = 160.0;
     //pixels from top where scaling should end
-    final double scaleEnd = scaleStart / 2;
+    const double scaleEnd = scaleStart / 2;
 
     double top = defaultTopMargin;
     double scale = 1.0;
@@ -198,7 +197,7 @@ return  Positioned(
         child:  FloatingActionButton(
           heroTag: "btn1",
           onPressed: (){},
-          child:  Icon(Icons.camera_alt_outlined),
+          child:  const Icon(Icons.camera_alt_outlined),
         ),
       ),
     );
@@ -215,7 +214,7 @@ return  Positioned(
           onTap: () {},
           title: Text(title),
           subtitle: Text(subTitle),
-          leading: Icon(Icons.camera_alt_outlined),
+          leading: const Icon(Icons.camera_alt_outlined),
         ),
       ),
     );
@@ -226,7 +225,7 @@ return  Positioned(
       padding: const EdgeInsets.all(14.0),
       child: Text(
         title,
-        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23),
+        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 23),
       ),
     );
   }
