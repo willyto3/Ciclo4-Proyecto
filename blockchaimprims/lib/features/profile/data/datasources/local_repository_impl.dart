@@ -26,4 +26,10 @@ class LocalRepositoryImpl extends LocalRepositoryInterface{
     throw UnimplementedError();
   }
 
+  @override
+  Future<String> saveToken(String token) {
+    // TODO: implement saveToken
+    throw UnimplementedError();
+  }
+
 }
