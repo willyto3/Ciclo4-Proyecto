@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                       height: 200,
                       width: 200,
                     ),
-                    radius: 100,
+                    radius: 90,
                   ),
                 ],
               ),
@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
             flex: 5,
             child: SingleChildScrollView(
               child: Padding(
-                padding: const EdgeInsets.all(30.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -55,7 +55,7 @@ class LoginScreen extends StatelessWidget {
                       style: GoogleFonts.pacifico(textStyle: estilo),
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 5),
                     Text(
                       'Username',
                       style: GoogleFonts.robotoCondensed(textStyle: estilo2),
@@ -70,7 +70,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 5),
                     Text(
                       'Password',
                       style: GoogleFonts.robotoCondensed(textStyle: estilo2),
@@ -85,7 +85,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 10),
                     ElevatedButton(
                         onPressed: (){
                           Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const BottomBarScreen(),));
