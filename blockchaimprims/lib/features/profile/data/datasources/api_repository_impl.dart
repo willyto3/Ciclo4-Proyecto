@@ -26,7 +26,7 @@ class ApiRepositoryImpl implements ApiRepositoryInterface {
       return LoginResponse(
           const User('John Doe', 'prueba@gmail.com', '123456', '+56912345678'),
           'AA111');
-    } else if (login.user == 'AA111' && login.password == '123456') {
+    } else if (login.user == 'AA222' && login.password == '123456') {
       return LoginResponse(
           const User(
               'Pollo Perez', 'prueba2@gmail.com', '123456', '+56912345679'),

@@ -1,25 +1,21 @@
 import 'package:blockchaimprims/features/profile/presentation/pages/login/login_screen.dart';
+import 'package:blockchaimprims/features/profile/presentation/pages/splash/splash_controller.dart';
 import 'package:blockchaimprims/features/profile/presentation/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends GetWidget<SplashController> {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  }
 }
 
-class _SplashScreenState extends State<SplashScreen> {
-
-  @override
-  void initState() {
-    super.initState();
-    Future.delayed(const Duration(seconds: 10), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const LoginScreen(),));
-    });
-  }
-  final estilo = const TextStyle(
+  const estilo = TextStyle(
     fontSize: 40,
     fontWeight: FontWeight.bold,
     color: ColoresApp.white,
