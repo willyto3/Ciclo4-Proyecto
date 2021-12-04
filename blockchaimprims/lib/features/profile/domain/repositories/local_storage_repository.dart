@@ -1,4 +1,4 @@
-import 'package:blockchaimprims/features/profile/domain/model/user.dart';
+import 'package:blockchaimprims/features/profile/data/models/user.dart';
 
 abstract class LocalRepositoryInterface {
   Future<String> getToken();
