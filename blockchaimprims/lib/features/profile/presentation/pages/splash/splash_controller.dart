@@ -25,6 +25,7 @@ class SplashController extends GetxController {
     if (token == 'PRUEBA') {
       final user = await apiRepositoryInterface.getUserFromToken(token);
       await localRepositoryInterface.saveUser(user);
+      Get.offNamed(DeliveryRoutes.bottomBar);
     } else {
       Get.offNamed(DeliveryRoutes.login);
     }
