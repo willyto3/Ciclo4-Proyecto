@@ -1,5 +1,7 @@
 import 'package:blockchaimprims/features/profile/domain/repositories/api_repository.dart';
 import 'package:blockchaimprims/features/profile/domain/repositories/local_storage_repository.dart';
+import 'package:blockchaimprims/features/profile/presentation/routes/delivery_navigation.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/state_manager.dart';
 
 class SplashController extends GetxController {
@@ -19,9 +21,12 @@ class SplashController extends GetxController {
 
   void validateSession() async {
     final token = await localRepositoryInterface.getToken();
-    if (token != null) {
+
+    if (token == 'PRUEBA') {
       final user = await apiRepositoryInterface.getUserFromToken(token);
       await localRepositoryInterface.saveUser(user);
-    } else {}
+    } else {
+      Get.offNamed(DeliveryRoutes.login);
+    }
   }
 }

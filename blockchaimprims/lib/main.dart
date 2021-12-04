@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-import 'features/profile/presentation/pages/splash/splash_screen.dart';
+import 'features/main_state_management.dart';
 
-void main() => runApp(const GetMaterialApp(home: SplashScreen()));
-
-
+void main() => runApp(const MainStateManagement());

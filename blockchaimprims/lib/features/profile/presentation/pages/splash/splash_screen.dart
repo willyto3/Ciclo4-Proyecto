@@ -1,27 +1,24 @@
-import 'package:blockchaimprims/features/profile/presentation/pages/login/login_screen.dart';
 import 'package:blockchaimprims/features/profile/presentation/pages/splash/splash_controller.dart';
 import 'package:blockchaimprims/features/profile/presentation/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends GetWidget<SplashController> {
-  const SplashScreen({Key? key}) : super(key: key);
+  final splashController = Get.find<SplashController>();
+
+  SplashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
-}
+    const estilo = TextStyle(
+      fontSize: 40,
+      fontWeight: FontWeight.bold,
+      color: ColoresApp.white,
+    );
 
-  const estilo = TextStyle(
-    fontSize: 40,
-    fontWeight: FontWeight.bold,
-    color: ColoresApp.white,
-  );
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -51,7 +48,7 @@ class SplashScreen extends GetWidget<SplashController> {
               Text(
                 'Block Chain Prism',
                 style: GoogleFonts.pacifico(textStyle: estilo),
-                ),
+              ),
             ],
           ),
         ),

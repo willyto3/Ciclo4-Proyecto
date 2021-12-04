@@ -3,7 +3,7 @@ import 'package:blockchaimprims/features/profile/domain/repositories/local_stora
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LocalRepositoryImpl extends LocalRepositoryInterface {
-  final _prefToken = 'TOKEN';
+  final _prefToken = 'AA111';
   static const _prefName = 'USER';
   static const _prefEmail = 'WILLYTOC@GMAIL:COM';
   static const _prefPassword = '12345';
