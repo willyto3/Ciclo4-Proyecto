@@ -48,7 +48,7 @@ dependencies:
   connectivity: ^3.0.6
 # Pendiente de que HACE ESTA DEPENDENCIA
   http: ^0.13.4
-  # Pendiente de que HACE ESTA DEPENDENCIA
+  # Es un Plugin para leer y escribir datos persistentes
   shared_preferences: ^2.0.9
   # Pendiente de que HACE ESTA DEPENDENCIA
   provider: ^6.0.1
