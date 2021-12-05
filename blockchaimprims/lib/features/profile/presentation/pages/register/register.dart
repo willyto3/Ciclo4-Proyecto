@@ -1,4 +1,3 @@
-import 'package:blockchaimprims/features/profile/presentation/pages/register/register.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,8 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../theme.dart';
 import '../bottom_bar/bottom_bar_screen.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({Key? key}) : super(key: key);
 
   final estilo = const TextStyle(
     fontSize: 40,
@@ -26,7 +25,7 @@ class LoginScreen extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            flex: 2,
+            flex: 1,
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -50,7 +49,7 @@ class LoginScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Text(
-                      'Login',
+                      'Register',
                       style: GoogleFonts.pacifico(textStyle: estilo),
                       textAlign: TextAlign.center,
                     ),
@@ -62,7 +61,52 @@ class LoginScreen extends StatelessWidget {
                     TextField(
                       decoration: InputDecoration(
                         prefixIcon: const Icon(Icons.person),
-                        hintText: 'Email, Phone Number or User Name',
+                        hintText: 'Enter your User Name',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5),
+                          borderSide: const BorderSide(color: ColoresApp.black),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      'Name',
+                      style: GoogleFonts.robotoCondensed(textStyle: estilo2),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        prefixIcon: const Icon(Icons.person),
+                        hintText: 'Enter your Name',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5),
+                          borderSide: const BorderSide(color: ColoresApp.black),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      'Email',
+                      style: GoogleFonts.robotoCondensed(textStyle: estilo2),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        prefixIcon: const Icon(Icons.email),
+                        hintText: 'Enter your Email',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5),
+                          borderSide: const BorderSide(color: ColoresApp.black),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      'Phone Number',
+                      style: GoogleFonts.robotoCondensed(textStyle: estilo2),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        prefixIcon: const Icon(Icons.phone),
+                        hintText: 'Enter your Phone Number',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(5),
                           borderSide: const BorderSide(color: ColoresApp.black),
@@ -84,36 +128,32 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 10),
-                    ElevatedButton(
-                        onPressed: () {
-                          Navigator.of(context)
-                              .pushReplacement(MaterialPageRoute(
-                            builder: (_) => const BottomBarScreen(),
-                          ));
-                        },
-                        child: Text('Log In',
-                            style: GoogleFonts.robotoCondensed(
-                                textStyle: estilo2))),
-                    Image.asset(
-                      'assets/images/logo/google_sign_in.png',
-                      width: 150,
+                    const SizedBox(height: 5),
+                    Text(
+                      'Repeat Password',
+                      style: GoogleFonts.robotoCondensed(textStyle: estilo2),
                     ),
-                    Row(
-                      children: [
-                        Text(
-                          'Dont Have a account? ',
-                          style:
-                              GoogleFonts.robotoCondensed(textStyle: estilo2),
+                    TextField(
+                      decoration: InputDecoration(
+                        prefixIcon: const Icon(Icons.lock),
+                        hintText: 'Password',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5),
+                          borderSide: const BorderSide(color: ColoresApp.black),
                         ),
-                        ElevatedButton(
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    ElevatedButton(
                         onPressed: (){
-                          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const RegisterScreen(),));
+                          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const BottomBarScreen(),));
                         },
-                        child: Text('Create a Account',
+                        child: Text('Register',
                             style: GoogleFonts.robotoCondensed(
                                 textStyle: estilo2))),
-                      ],
+                    Text(
+                      'You Have a account?. Sign In.',
+                      style: GoogleFonts.robotoCondensed(textStyle: estilo2),
                     ),
                     const SizedBox(height: 10),
                     Text(
