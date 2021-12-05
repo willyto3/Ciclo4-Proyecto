@@ -59,7 +59,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-# Pendiente de que HACE ESTA DEPENDENCIA
+# Dependencia para hacer Test
   mockito: ^5.0.16
   # Fuentes de Google
   google_fonts: ^2.1.0
