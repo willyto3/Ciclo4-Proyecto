@@ -19,10 +19,10 @@ class BottomBarScreen extends StatefulWidget {
 }
 
 const estilo = TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeight.bold,
-    color: ColoresApp.white,
-  );
+  fontSize: 20,
+  fontWeight: FontWeight.bold,
+  color: ColoresApp.white,
+);
 
 class _BottomBarScreenState extends State<BottomBarScreen> {
   final List _pages = [
@@ -43,13 +43,19 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_selectedIndex],
-      appBar: AppBar(title: Text(
-                'Block Chain Prism',
-                style: GoogleFonts.pacifico(textStyle: estilo),
-                textAlign: TextAlign.left,
-                ),
-                // TODO: Colocar el icono del Chat en la parte derecha
-                ),
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(
+              'Block Chain Prism',
+              style: GoogleFonts.pacifico(textStyle: estilo),
+              textAlign: TextAlign.left,
+            ),
+            const Icon(Icons.chat),
+          ],
+        ),
+      ),
       bottomNavigationBar: BottomAppBar(
         elevation: 5,
         shape: const CircularNotchedRectangle(),
@@ -79,7 +85,7 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
               tooltip: "Camera",
               label: "Camera",
             ),
-             // Icono de Compras
+            // Icono de Compras
             BottomNavigationBarItem(
               icon: Icon(Icons.shopping_basket),
               tooltip: "Shop",
@@ -97,4 +103,3 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
     );
   }
 }
-
