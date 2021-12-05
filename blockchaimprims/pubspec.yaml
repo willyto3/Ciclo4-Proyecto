@@ -39,7 +39,7 @@ dependencies:
 # Es un localizador de servicios para Flutter y Dart.
   get_it: ^7.2.0
 # Pendiente de que HACE ESTA DEPENDENCIA
-  flutter_bloc: ^7.3.0
+  flutter_bloc: ^8.0.0
 # Pendiente de que HACE ESTA DEPENDENCIA
   equatable: ^2.0.3
 # Pendiente de que HACE ESTA DEPENDENCIA
