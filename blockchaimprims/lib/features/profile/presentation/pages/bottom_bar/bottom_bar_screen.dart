@@ -5,7 +5,7 @@ import '../../theme.dart';
 import '../camera.dart';
 import '../home.dart';
 import '../search.dart';
-import '../shop.dart';
+import '../shop/shop.dart';
 import '../user.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -52,7 +52,7 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
               style: GoogleFonts.pacifico(textStyle: estilo),
               textAlign: TextAlign.left,
             ),
-            const Icon(Icons.chat),
+            IconButton(onPressed: () {  }   ,icon: const Icon(Icons.chat),),
           ],
         ),
       ),
