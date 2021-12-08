@@ -1,7 +1,10 @@
+import 'package:blockchaimprims/features/profile/presentation/pages/shop/shop_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Shop extends StatelessWidget {
-  const Shop({Key? key}) : super(key: key);
+  Shop({Key? key}) : super(key: key);
+  final ShopController shopController = Get.put(ShopController());
 
   @override
   Widget build(BuildContext context) {
@@ -9,33 +12,70 @@ class Shop extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: ListView.builder(
-              padding: const EdgeInsets.only(top: 10),
-              itemBuilder: (BuildContext context, int index) => Container(
-                height: 150,
-                color: Colors.red,
-                margin: const EdgeInsets.only(bottom: 10),
-                child: Row(
-                  children: [
-                    Container(
-                      width: 150,
-                      color: Colors.blue,
-                    ),
-                    const SizedBox(width: 10),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children:const [
-                          Text('Title'),
-                          Text('Description'),
-                          Text('\$Price'),
-                        ]
+            child: Obx(
+              () {
+                if (shopController.loading.value == true) {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+
+                if (shopController.products.isEmpty) {
+                  return const Center(
+                    child: Text('No products Founds'),
+                  );
+                }
+                return ListView.builder(
+                  itemCount: shopController.products.length,
+                  padding: const EdgeInsets.only(top: 10),
+                  itemBuilder: (BuildContext context, int index) => Card(
+                    child: Container(
+                      height: 150,
+                      padding: const EdgeInsets.all(10),
+                      margin: const EdgeInsets.only(bottom: 10),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 120,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                    shopController.products[index]["image"]),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      shopController.products[index]["title"],
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                    Expanded(
+                                      child: Text(
+                                        shopController.products[index]
+                                            ["description"],
+                                        maxLines: 5,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
+                                    Text(
+                                        '\$${shopController.products[index]["price"]}'),
+                                  ]),
+                            ),
+                          )
+                        ],
                       ),
-                    )
-                  ],
-                ),
-              ),
+                    ),
+                  ),
+                );
+              },
             ),
           ),
         ],

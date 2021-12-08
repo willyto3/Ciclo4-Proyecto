@@ -29,7 +29,7 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
     const Home(),
     const Search(),
     const Camera(),
-    const Shop(),
+    Shop(),
     const User(),
   ];
   int _selectedIndex = 0;

@@ -1,6 +1,3 @@
-
-//import 'package:meta/meta.dart';
-
 class User{
   const User(
     this.name,
