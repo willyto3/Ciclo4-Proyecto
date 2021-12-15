@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../theme.dart';
 import '../camera.dart';
-import '../home.dart';
+import '../home/home.dart';
 import '../search.dart';
 import '../shop/shop.dart';
 import '../user.dart';
@@ -26,7 +26,7 @@ const estilo = TextStyle(
 
 class _BottomBarScreenState extends State<BottomBarScreen> {
   final List _pages = [
-    const Home(),
+    Home(),
     const Search(),
     const Camera(),
     Shop(),
