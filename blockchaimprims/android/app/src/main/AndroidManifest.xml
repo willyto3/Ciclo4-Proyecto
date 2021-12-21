@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.blockchaimprims">
    <application
-        android:label="blockchaimprims"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Block Chaim Prims"
+        android:icon="@drawable/logoblockchainprism">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
